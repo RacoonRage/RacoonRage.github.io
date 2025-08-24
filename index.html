@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaos Incoming!</title>
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts for a comic-book style font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Apply custom font */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000000; /* Solid black background */
+            overflow: hidden; /* Prevent scrollbars from animation overflows */
+        }
+        .font-bangers {
+            font-family: 'Bangers', cursive;
+        }
+        
+        /* Custom styles for the explosive, comic-book feel */
+        .comic-text {
+            -webkit-text-stroke: 2px black;
+            text-shadow: 
+                3px 3px 0 #1a1a1a,
+                -1px -1px 0 #1a1a1a,  
+                 1px -1px 0 #1a1a1a,
+                -1px  1px 0 #1a1a1a,
+                 1px  1px 0 #1a1a1a;
+        }
+
+        /* Complex animations for fluid drifting across the screen */
+        @keyframes drift-1 {
+            0% { transform: translate(-10vw, -10vh) rotate(0deg); }
+            50% { transform: translate(100vw, 40vh) rotate(180deg); }
+            100% { transform: translate(-10vw, -10vh) rotate(360deg); }
+        }
+        .animate-drift-1 {
+            animation: drift-1 25s linear infinite;
+        }
+
+        @keyframes drift-2 {
+            0% { transform: translate(110vw, 80vh) rotate(0deg); }
+            50% { transform: translate(-20vw, 20vh) rotate(-150deg); }
+            100% { transform: translate(110vw, 80vh) rotate(-360deg); }
+        }
+        .animate-drift-2 {
+            animation: drift-2 30s linear infinite;
+        }
+
+        @keyframes drift-3 {
+            0% { transform: translate(40vw, 110vh) rotate(20deg); }
+            50% { transform: translate(60vw, -20vh) rotate(180deg); }
+            100% { transform: translate(40vw, 110vh) rotate(380deg); }
+        }
+        .animate-drift-3 {
+            animation: drift-3 20s linear infinite;
+        }
+
+        @keyframes drift-4 {
+            0% { transform: translate(110vw, 10vh) rotate(0deg); }
+            50% { transform: translate(-20vw, 90vh) rotate(120deg); }
+            100% { transform: translate(110vw, 10vh) rotate(360deg); }
+        }
+        .animate-drift-4 {
+            animation: drift-4 35s linear infinite;
+        }
+
+        @keyframes drift-5 {
+            0% { transform: translate(-10vw, 90vh) rotate(-30deg); }
+            50% { transform: translate(110vw, 10vh) rotate(200deg); }
+            100% { transform: translate(-10vw, 90vh) rotate(330deg); }
+        }
+        .animate-drift-5 {
+            animation: drift-5 28s linear infinite;
+        }
+    </style>
+</head>
+<body class="text-white">
+
+    <!-- Main container, centered on the page -->
+    <div class="min-h-screen flex flex-col items-center justify-center p-4 relative">
+
+        <!-- Floating SVG Icons -->
+        <div class="absolute top-0 left-0 animate-drift-1 opacity-50" style="animation-delay: -5s;">
+            <svg class="w-32 h-32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="solanaGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#00F2A9;" />
+                        <stop offset="100%" style="stop-color:#DC1FFF;" />
+                    </linearGradient>
+                </defs>
+                <circle cx="50" cy="50" r="50" fill="black"/>
+                <rect x="25" y="30" width="50" height="10" fill="url(#solanaGradient)" rx="2"/>
+                <rect x="25" y="45" width="50" height="10" fill="url(#solanaGradient)" rx="2"/>
+                <rect x="25" y="60" width="50" height="10" fill="url(#solanaGradient)" rx="2"/>
+            </svg>
+        </div>
+        <div class="absolute top-0 left-0 animate-drift-2 opacity-40" style="animation-delay: -2s;">
+            <svg class="w-20 h-20" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="50" fill="black"/>
+                <rect x="25" y="30" width="50" height="10" fill="url(#solanaGradient)" rx="2"/>
+                <rect x="25" y="45" width="50" height="10" fill="url(#solanaGradient)" rx="2"/>
+                <rect x="25" y="60" width="50" height="10" fill="url(#solanaGradient)" rx="2"/>
+            </svg>
+        </div>
+        <div class="absolute top-0 left-0 animate-drift-3 opacity-60" style="animation-delay: -10s;">
+            <svg class="w-28 h-28" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="50" fill="black"/>
+                <rect x="25" y="30" width="50" height="10" fill="url(#solanaGradient)" rx="2"/>
+                <rect x="25" y="45" width="50" height="10" fill="url(#solanaGradient)" rx="2"/>
+                <rect x="25" y="60" width="50" height="10" fill="url(#solanaGradient)" rx="2"/>
+            </svg>
+        </div>
+        <div class="absolute top-0 left-0 animate-drift-4 opacity-30" style="animation-delay: -15s;">
+            <svg class="w-16 h-16" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="50" fill="black"/>
+                <rect x="25" y="30" width="50" height="10" fill="url(#solanaGradient)" rx="2"/>
+                <rect x="25" y="45" width="50" height="10" fill="url(#solanaGradient)" rx="2"/>
+                <rect x="25" y="60" width="50" height="10" fill="url(#solanaGradient)" rx="2"/>
+            </svg>
+        </div>
+        <div class="absolute top-0 left-0 animate-drift-5 opacity-50" style="animation-delay: -20s;">
+            <svg class="w-24 h-24" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="50" fill="black"/>
+                <rect x="25" y="30" width="50" height="10" fill="url(#solanaGradient)" rx="2"/>
+                <rect x="25" y="45" width="50" height="10" fill="url(#solanaGradient)" rx="2"/>
+                <rect x="25" y="60" width="50" height="10" fill="url(#solanaGradient)" rx="2"/>
+            </svg>
+        </div>
+
+        <!-- Centered Content -->
+        <main class="text-center z-10">
+            <!-- Logo -->
+            <img src="https://i.imgur.com/NRKtmQC.jpeg" 
+                 alt="Rocket Raccoon Logo" 
+                 class="w-48 h-48 md:w-64 md:h-64 mx-auto rounded-full border-4 border-amber-600 shadow-lg mb-6"
+                 onerror="this.onerror=null; this.src='https://placehold.co/256x256/000000/ffffff?text=Logo';">
+
+            <!-- Headline -->
+            <h1 class="font-bangers text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-amber-400 comic-text tracking-wider">
+                Chaos incoming🚀<br>Raccoon rockets ready!?
+            </h1>
+
+            <!-- Countdown Timer -->
+            <div id="countdown" class="flex justify-center gap-2 sm:gap-4 md:gap-8 mt-8 text-center">
+                <div class="bg-black bg-opacity-60 p-3 sm:p-4 rounded-lg border-2 border-slate-600 min-w-[70px] sm:min-w-[100px]">
+                    <div id="days" class="font-bangers text-4xl sm:text-6xl text-slate-200">00</div>
+                    <div class="text-xs sm:text-sm uppercase tracking-widest text-slate-400">Days</div>
+                </div>
+                <div class="bg-black bg-opacity-60 p-3 sm:p-4 rounded-lg border-2 border-slate-600 min-w-[70px] sm:min-w-[100px]">
+                    <div id="hours" class="font-bangers text-4xl sm:text-6xl text-slate-200">00</div>
+                    <div class="text-xs sm:text-sm uppercase tracking-widest text-slate-400">Hours</div>
+                </div>
+                <div class="bg-black bg-opacity-60 p-3 sm:p-4 rounded-lg border-2 border-slate-600 min-w-[70px] sm:min-w-[100px]">
+                    <div id="minutes" class="font-bangers text-4xl sm:text-6xl text-slate-200">00</div>
+                    <div class="text-xs sm:text-sm uppercase tracking-widest text-slate-400">Minutes</div>
+                </div>
+                <div class="bg-black bg-opacity-60 p-3 sm:p-4 rounded-lg border-2 border-slate-600 min-w-[70px] sm:min-w-[100px]">
+                    <div id="seconds" class="font-bangers text-4xl sm:text-6xl text-slate-200">00</div>
+                    <div class="text-xs sm:text-sm uppercase tracking-widest text-slate-400">Seconds</div>
+                </div>
+            </div>
+            
+            <div id="launched" class="hidden font-bangers text-5xl md:text-7xl text-green-500 comic-text tracking-wider mt-8">
+                LAUNCHED! TO THE MOON!
+            </div>
+
+            <!-- Gemini API Features -->
+            <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <button id="generateHypeBtn" class="bg-amber-500 hover:bg-amber-600 text-black font-bangers text-2xl px-6 py-2 rounded-lg shadow-lg transition-transform transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed w-full sm:w-auto">
+                    ✨ Generate Hype!
+                </button>
+                <button id="missionLogBtn" class="bg-slate-600 hover:bg-slate-700 text-white font-bangers text-2xl px-6 py-2 rounded-lg shadow-lg transition-transform transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed w-full sm:w-auto">
+                    ✨ Read Mission Log
+                </button>
+            </div>
+            <div id="hypeSlogan" class="mt-4 text-slate-300 text-lg italic h-10 flex items-center justify-center px-4 text-center">
+                <!-- Generated slogan will appear here -->
+            </div>
+             <div id="missionLog" class="mt-2 text-slate-300 text-md h-auto min-h-[6rem] flex items-center justify-center px-4 text-center border-t-2 border-slate-700 pt-4" style="display: none;">
+                <!-- Generated mission log will appear here -->
+            </div>
+            <div id="loader" class="hidden mt-4">
+                <svg class="animate-spin h-8 w-8 text-white mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        // Ensure the script runs after the DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // Set the date we're counting down to
+            const countDownDate = new Date("Sep 15, 2025 00:00:00").getTime();
+
+            // Get elements to update for the countdown
+            const daysEl = document.getElementById('days');
+            const hoursEl = document.getElementById('hours');
+            const minutesEl = document.getElementById('minutes');
+            const secondsEl = document.getElementById('seconds');
+            const countdownEl = document.getElementById('countdown');
+            const launchedEl = document.getElementById('launched');
+
+            // Get elements for the Gemini features
+            const generateHypeBtn = document.getElementById('generateHypeBtn');
+            const missionLogBtn = document.getElementById('missionLogBtn');
+            const hypeSloganEl = document.getElementById('hypeSlogan');
+            const missionLogEl = document.getElementById('missionLog');
+            const loaderEl = document.getElementById('loader');
+
+            // Update the count down every 1 second
+            const countdownInterval = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = countDownDate - now;
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                const formatTime = (time) => time < 10 ? `0${time}` : time;
+
+                daysEl.innerHTML = formatTime(days);
+                hoursEl.innerHTML = formatTime(hours);
+                minutesEl.innerHTML = formatTime(minutes);
+                secondsEl.innerHTML = formatTime(seconds);
+
+                if (distance < 0) {
+                    clearInterval(countdownInterval);
+                    countdownEl.classList.add('hidden');
+                    launchedEl.classList.remove('hidden');
+                }
+            }, 1000);
+
+            // Generic function to call Gemini API
+            const callGemini = async (prompt, targetEl) => {
+                console.log("Attempting to call Gemini API...");
+                targetEl.textContent = '';
+                loaderEl.classList.remove('hidden');
+                generateHypeBtn.disabled = true;
+                missionLogBtn.disabled = true;
+
+                try {
+                    let chatHistory = [{ role: "user", parts: [{ text: prompt }] }];
+                    const payload = { contents: chatHistory };
+                    const apiKey = ""; // Leave as-is
+                    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+                    
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+
+                    if (!response.ok) {
+                        throw new Error(`API request failed with status ${response.status}`);
+                    }
+
+                    const result = await response.json();
+                    console.log("API Response:", result);
+                    
+                    if (result.candidates?.[0]?.content?.parts?.[0]?.text) {
+                        const text = result.candidates[0].content.parts[0].text;
+                        targetEl.textContent = `"${text.trim().replace(/"/g, '')}"`;
+                        if(targetEl === missionLogEl) {
+                            missionLogEl.style.display = 'flex';
+                        }
+                    } else {
+                        throw new Error("Unexpected API response structure");
+                    }
+                } catch (error) {
+                    console.error("Error calling Gemini API:", error);
+                    targetEl.textContent = "Request failed. Check console for details.";
+                } finally {
+                    loaderEl.classList.add('hidden');
+                    generateHypeBtn.disabled = false;
+                    missionLogBtn.disabled = false;
+                }
+            };
+
+            // Event listener for the hype button
+            generateHypeBtn.addEventListener('click', () => {
+                console.log("Generate Hype button clicked.");
+                const prompt = "Generate a short, funny, and energetic hype slogan for a meme coin themed around a raccoon with rockets. The slogan should be less than 15 words and must include a mention of our X profile @RACCONMEME. Think crypto, space, chaos, and raccoons. Be witty and bold.";
+                missionLogEl.style.display = 'none';
+                callGemini(prompt, hypeSloganEl);
+            });
+
+            // Event listener for the mission log button
+            missionLogBtn.addEventListener('click', () => {
+                console.log("Read Mission Log button clicked.");
+                const prompt = "Write a short, funny, fictional mission log entry (2-3 sentences) from the perspective of a raccoon astronaut preparing for a chaotic rocket launch. Mention the launch date of September 15th, 2025, shiny coins, and causing mayhem.";
+                hypeSloganEl.textContent = '';
+                callGemini(prompt, missionLogEl);
+            });
+        });
+    </script>
+
+</body>
+</html>
